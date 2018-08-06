@@ -1,0 +1,25 @@
+body {
+  font-family: arial;
+  font-size: 3vh;
+  color: silver;
+  background-color: #008fe2
+  }
+h1 {
+  font-family: arial;
+  font-size: 20vw;
+  color: #007dc6
+  }
+a:link {
+  color: silver;
+  text-decoration: none
+  }
+a:visited {
+  color: silver;
+  text-decoration: none
+  }
+a:hover {
+    text-decoration: underline;
+  }
+a:active {
+    text-decoration: underline;
+  }
