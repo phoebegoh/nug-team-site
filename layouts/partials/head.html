@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{{ partial "schema" . }}
+
+{{ with .Title }} <title>{{ . }} {{if $.IsHome}}- {{ $.Site.Params.slogan | default "" | safeHTML }}{{ end }}</title>
+{{ end }}
+
+{{ if .Description }}<meta name="description" content="{{ .Description }}" />
+{{ else }}<meta name="description" content="{{ .Site.Params.description }}" />
+{{ end }}
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<!-- added font awesome and the fonts i want -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<!-- Theme stylesheet, if possible do not edit this stylesheet -->
+<link href="{{ "css/style.css" | absURL }}" rel="stylesheet" id="theme-stylesheet" type='text/css' media='all'>
+<!-- Custom stylesheet - for your changes -->
+<link href="{{ "css/custom.css" | absURL }}" rel="stylesheet" type='text/css' media='all'>
+<link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}" type="image/x-icon">
+<link rel="icon" href="{{ "img/favicon.ico" | absURL }}" type="image/x-icon">
+{{ if .RSSLink }}
+<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title | default "" }}" />
+<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title | default "" }}" />
+{{ end }}
+{{ template "_internal/google_analytics_async.html" . }}
