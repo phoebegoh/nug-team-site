@@ -1,9 +1,9 @@
 +++
-image = "img/portfolio/bridge1.jpg"
+image = "img/about.jpg"
 showonlyimage = true
 date = "2016-11-05T19:44:32+05:30"
 title = "Another Awesome Post"
-categories = [ "travel" ]
+categories = [ "meta" ]
 draft = false
 weight = 2
 +++
